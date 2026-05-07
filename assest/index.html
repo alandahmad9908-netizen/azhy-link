@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azhy Cosmetic - Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4f2b36 0%, #a65d75 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4c2637;
+            padding: 40px 20px;
+            /* لێرە overflow: hidden لابراوە و کراوە بە ئەوتۆ بۆ ئەوەی سکڕۆڵ بکات */
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* --- ستایلی بەفرە جوڵاوەکە --- */
+        .snow-container {
+            position: fixed; /* کراوە بە فیکس بۆ ئەوەی لەگەڵ سکڕۆڵکردن نەجوڵێت */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .snow {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            padding: 40px 25px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 20px;
+        }
+
+        .logo-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .logo-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #4f2b36; 
+            margin-bottom: 5px;
+            font-weight: 800;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 35px;
+            letter-spacing: 0.5px;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .link-card {
+            background: #4f2b36;
+            padding: 16px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .link-card i {
+            position: absolute;
+            right: 20px;
+            font-size: 20px;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            background: #6d3b4b;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+    
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; text-shadow: 0 0 12px rgba(255, 255, 255, 1); }
+        }
+
+        .footer-text {
+            margin-top: 15px;
+            font-size: 10px;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="snow-container" id="snow-container"></div>
+
+    <div class="container">
+        <div class="logo-wrapper">
+            <img src="logo.jpg.jpg" alt="Azhy Cosmetic" class="logo-img">
+        </div>
+
+        <h1>Azhy Cosmetic</h1>
+        <p class="tagline">Beauty & Personal Care</p>
+
+        <div class="links-list">
+            <a href="https://www.instagram.com/azhy_cosmatic?igsh=Y2UxMHhjdm5vZG1i" class="link-card instagram">
+                <i class="fab fa-instagram"></i>
+                ئینستاگرام
+            </a>
+
+            <a href="https://www.snapchat.com/add/azhy_cosmatic?share_id=ffHR6-iDtdM&locale=en-US" class="link-card snapchat">
+                <i class="fab fa-snapchat"></i>
+                سناپچات
+            </a>
+
+            <a href="https://www.tiktok.com/@azhycosmetic?_r=1&_t=ZS-969lpvLgrjw" class="link-card tiktok">
+                <i class="fab fa-tiktok"></i>
+                تیک تۆک
+            </a>
+
+            <a href="https://maps.app.goo.gl/4KupARdXiLqysasX8" class="link-card location">
+                <i class="fas fa-map-marker-alt"></i>
+                ناونیشان لەسەر نەخشە
+            </a>
+        </div>
+
+        
+        <p class="footer-text">© 2026 Azhy Cosmetic</p>
+    </div>
+
+    <script>
+        const container = document.getElementById('snow-container');
+        const snowCount = 50;
+
+        for (let i = 0; i < snowCount; i++) {
+            const snow = document.createElement('div');
+            snow.className = 'snow';
+            const size = Math.random() * 5 + 2 + 'px';
+            snow.style.width = size;
+            snow.style.height = size;
+            snow.style.left = Math.random() * 100 + 'vw';
+            const duration = Math.random() * 3 + 2 + 's';
+            const delay = Math.random() * 5 + 's';
+            snow.style.animationDuration = duration;
+            snow.style.animationDelay = delay;
+            container.appendChild(snow);
+        }
+    </script>
+
+</body>
+</html>
